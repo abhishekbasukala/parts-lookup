@@ -1,0 +1,15 @@
+package com.altimetrik.spring.boot.parts.lookup.exception;
+
+import lombok.Data;
+import org.springframework.http.HttpStatus;
+
+@Data
+public class PartsException extends RuntimeException{
+
+    private HttpStatus httpStatus;
+
+    public PartsException(String message, HttpStatus httpStatus) {
+        super(message);
+        this.httpStatus=httpStatus;
+    }
+}
