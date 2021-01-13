@@ -5,6 +5,7 @@ import com.altimetrik.spring.boot.parts.lookup.model.Part;
 import com.altimetrik.spring.boot.parts.lookup.model.PartRequest;
 import com.altimetrik.spring.boot.parts.lookup.model.PartsResponse;
 import com.altimetrik.spring.boot.parts.lookup.repository.PartsRepository;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
@@ -12,6 +13,7 @@ import org.springframework.stereotype.Service;
 import java.util.Optional;
 
 @Service
+@Slf4j
 public class PartsService {
 
     private PartsRepository partsRepository;
@@ -22,6 +24,7 @@ public class PartsService {
     }
 
     public PartsResponse getPart(Long partId){
+        log.info("Getting part with id: "+ partId);
         Optional<Part> partOptional = partsRepository.findById(partId);
 
         Part part = partOptional
@@ -31,6 +34,7 @@ public class PartsService {
     }
 
     public Part savePart(PartRequest partRequest) {
+        log.info("Saving part....");
         Part part = partsRepository.save(toPart(partRequest));
         if(part == null){
             throw new PartsException("Error saving Part", HttpStatus.INTERNAL_SERVER_ERROR);
