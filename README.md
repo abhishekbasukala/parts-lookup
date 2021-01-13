@@ -9,6 +9,8 @@ Parts Lookup serivce is used to store and retrieve vehicle parts information.
     * Add Java Home path to the PATH
 2. **Download and install MySQL :**
     * https://www.mysql.com/downloads/
+    * (Optional) Download MySQL Workbench: https://dev.mysql.com/downloads/workbench/
+    * Run the SQL from the directory `/src/main/resources/db.sql`
 3. **Clone the repo:**
     * git@github.com:abhishekbasukala/parts-lookup.git
 4. **Start the server:**
