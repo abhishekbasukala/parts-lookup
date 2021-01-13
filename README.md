@@ -2,7 +2,7 @@
 
 Parts Lookup serivce is used to store and retrieve vehicle parts information.
 
-## Workshop Setup
+## Workspace Setup
 
 1. **Download and install Java :**
     * https://www.oracle.com/java/technologies/javase-downloads.html
