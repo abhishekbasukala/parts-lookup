@@ -4,7 +4,7 @@ USE db_parts;
 
 CREATE TABLE part
 (
-    id_parts BIGINT(100) NOT NULL,
+    id_parts BIGINT(100) NOT NULL AUTO_INCREMENT,
     parts_name VARCHAR(45),
     parts_description VARCHAR(255),
     price_per_unit VARCHAR(45),
